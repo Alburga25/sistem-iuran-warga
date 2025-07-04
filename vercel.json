@@ -21,8 +21,8 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://website-iuran.vercel.app",
-        "ASSET_URL": "https://website-iuran.vercel.app",
+        "APP_URL": "https://sistem-iuran-warga.vercel.app",
+        "ASSET_URL": "https://sistem-iuran-warga.vercel.app",
         "APP_KEY": "base64:fS2pBQ0PfJUJ+zaPM4wDHGJj30GfDzEHR/yN0VltJ14=",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
