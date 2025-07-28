@@ -34,6 +34,7 @@
             Iuran Pembayaran
         </a>
         @endif
+        
         <a href="{{ route('tagihan.index') }}"
             class="block transition duration-200 rounded px-3 py-2 font-medium
                   {{ request()->routeIs('tagihan.index') 
@@ -41,6 +42,8 @@
                       : 'text-gray-100 hover:bg-gray-200 hover:text-gray-700' }}">
             Tagihan
         </a>
+
+        @if(auth()->check() && auth()->user()->role === 'admin')
         <a href="{{ route('tagihan.semuaWarga') }}"
             class="block transition duration-200 rounded px-3 py-2 font-medium
                   {{ request()->routeIs('tagihan.semuaWarga') 
@@ -49,7 +52,7 @@
             Tagihan Warga
         </a>
 
-        @if(auth()->check() && auth()->user()->role === 'admin')
+
         <a href="{{ route('tagihan.notifikasi') }}"
             class="block transition duration-200 rounded px-3 py-2 font-medium
           {{ request()->routeIs('tagihan.notifikasi') 
@@ -65,7 +68,6 @@
                       : 'text-gray-100 hover:bg-gray-200 hover:text-gray-700' }}">
             List Warga
         </a>
-        @endif
         <a href="{{ route('tagihan.laporan') }}"
             class="block transition duration-200 rounded px-3 py-2 font-medium
                   {{ request()->routeIs('tagihan.laporan') 
@@ -73,6 +75,7 @@
                       : 'text-gray-100 hover:bg-gray-200 hover:text-gray-700' }}">
             Laporan Keuangan
         </a>
+        @endif
         <a href="{{ route('tagihan.bukti-pembayaran') }}"
             class="block transition duration-200 rounded px-3 py-2 font-medium
                   {{ request()->routeIs('tagihan.bukti-pembayaran') 
